@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.ComponentModel.DataAnnotations;
 
 namespace Conway.Pages
 {
@@ -12,7 +13,20 @@ namespace Conway.Pages
             _logger = logger;
         }
 
+        [BindProperty]
+        [Range(10,100)]
+        public int Height { get; set; }
+
+        [BindProperty]
+        [Range(10,100)]
+        public int Width { get; set; }
+
         public void OnGet()
+        {
+
+        }
+
+        public void OnPost()
         {
 
         }
