@@ -20,7 +20,7 @@ namespace Conway.Pages
                 return Page();
             }
 
-            return RedirectToPage("/Index");
+            return RedirectToPage("/FillGameBoard");
         }
     }
 }
